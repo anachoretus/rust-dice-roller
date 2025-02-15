@@ -8,7 +8,7 @@ fn main() {
     io::stdin().read_line(&mut input).expect("Failed to read input"); //read input
 
     let sides: u8 = match input.trim().parse() {
-        Ok(num) if [4, 6, 8, 10, 20, 100].contains(&num) => num, //validate dice sides
+        Ok(num) if [4, 6, 8, 10, 12, 20, 100].contains(&num) => num, //validate dice sides
         _ => { //else
             println!("Invalid input. Defaulting to d20.");
             20 //default do d20 if input is invalid
